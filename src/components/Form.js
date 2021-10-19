@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import axios from "axios"
+import {registrarUsuario} from "./apiFormulario"
 
 
 function Form() {
@@ -22,7 +23,7 @@ function Form() {
 
   return (
     <div>
-      <form>
+      <form onSubmit={criar}>
         <label className="label">Nome</label>
         <input
           type="text"
@@ -45,7 +46,7 @@ function Form() {
           onChange={introduceDatos}
         ></input>
 
-        <input onClick={criar} type="submit" value="Guardar" />
+        <input type="submit" value="Guardar"/>
       </form>
       <h3>
         
