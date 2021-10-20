@@ -1,58 +1,52 @@
 import React, { useState } from "react";
-import axios from "axios"
-import {registrarUsuario} from "./apiFormulario"
+import {registrarUsuario,listarContatos} from "./apiFormulario"
+
 
 
 function Form() {
-  const [datos, setDatos] = useState({
-    nome: "",
-    email: "",
-    telefone: ""
-  });
-  const introduceDatos = (event) => {
-    setDatos({
-      ...datos,
-      [event.target.name]: event.target.value
-    });
-  };
-  const criar = () =>{
+
+  const [name,setName] = useState("");
+  const [email,setEmail] = useState("");
+  const[telefone,setTelefone] = useState("");
+
+  const Criar = (event) => {
     event.preventDefault()
-    const data = {nome:nome,email:email,telefone:telefone}
+    const data= {nome:name,email:email,telefone:telefone}
     registrarUsuario(data)
   }
 
+   
+ 
+  
+ 
   return (
     <div>
-      <form onSubmit={criar}>
+      <form onSubmit={Criar}>
         <label className="label">Nome</label>
         <input
           type="text"
           placeholder="Ana"
           name="nome"
-          onChange={introduceDatos}
+          onChange={(event) => setName(event.target.value)}
         ></input>
         <label className="label">E-mail</label>
         <input
           type="email"
           placeholder="ana@gmail.com"
           name="email"
-          onChange={introduceDatos}
+          onChange={(event) => setEmail(event.target.value)}
         ></input>
         <label className="label">Telefone</label>
         <input
           type="tel"
           placeholder="14 999999999"
           name="telefone"
-          onChange={introduceDatos}
+          onChange={(event) => setTelefone(event.target.value)}
         ></input>
 
-        <input type="submit" value="Guardar"/>
+        <button type="submit" >Guardar</button>
       </form>
-      <h3>
-        
-        {datos.nome}-{datos.email}-{datos.telefone}
-      </h3>
-    </div>
+      </div>
   );
 }
 export default Form;

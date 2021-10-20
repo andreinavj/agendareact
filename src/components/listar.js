@@ -15,21 +15,40 @@ const fazerLista = async() => {
    
     return (
         <div>
-                <button onClick={() => fazerLista()}>Contatos cadastrados</button>
+<table>
+  <tr>
+    <th>Nome Completo</th>
+    <th>E-mail</th>
+    <th>Telefone</th>
+  </tr>
+ 
 
-                {lista && lista.data?.map(element => {
-                    return (
-                        <div  key = {element.id}>
-                            <ul>
-                                
-                        <li>{element.nome}</li>
-                        <li>{element.email}</li>
-                        <li>{element.telefone}</li>
-                            </ul>
-                        </div>
-                    )
-                })}
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><button>Editar</button></td>
+    <td><button>Apagar</button></td>
+  </tr>
+ 
+</table>
+<button onClick={() => fazerLista()}>Contatos cadastrados</button>
 
+{lista && lista.data?.map(datos => {
+    return (
+        <div  key = {datos.id}>
+            <ul>
+                
+        <li>{datos.nome}</li>
+        <li>{datos.email}</li>
+        <li>{datos.telefone}</li>
+            </ul>
+        </div>
+    )
+})}
+
+
+               
         </div>
     )
 }
