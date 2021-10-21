@@ -10,6 +10,7 @@ function Form() {
   const[telefone,setTelefone] = useState("");
 
   const Criar = (event) => {
+    console.log("funciona")
     event.preventDefault()
     const data= {nome:name,email:email,telefone:telefone}
     registrarUsuario(data)

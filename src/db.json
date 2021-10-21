@@ -1,34 +1,16 @@
 {
-    "contacts": [
-      
-        {
-        "id": 1,
-        "name": "Andreina Velasquez",
-        "email": "andreina@hotmail.com",
-        "telefone":14 999999999
-        
-      },
-      {
-        "id":2
-        "name": "Randy Laya",
-        "email": "randy00@gmail.com",
-        "telefone": 11 999999999
-       
-      },
-      {
-        "name": "Any Daniela",
-        "email": "daniela123@gmail.com",
-        "id": 3,
-        "telefone":14 999999999
-
-      },
-      {
-        "name": "Ambar Gabriela",
-        "email": "ambar321@gmail.com",
-        "id": 4,
-        "telefone":14 999999999
-
-      }
-    ]
-  }   
-  
+  "contacts": [
+    {
+      "nome": "Andreina Velasquez",
+      "email": "velasquezandreina975@gmail.com",
+      "telefone": "999999999",
+      "id": 1
+    },
+    {
+      "nome": "Andreina Velasquez",
+      "email": "velasquezandreina975@gmail.com",
+      "telefone": "999999999",
+      "id": 2
+    }
+  ]
+}

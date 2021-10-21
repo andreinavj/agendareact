@@ -1,18 +1,18 @@
-import { waitForElementToBeRemoved } from '@testing-library/dom'
+
 import React, { useState } from 'react'
 import { listarContatos } from "./apiFormulario"
 
-function Listar() {
-   const [lista, setLista] = useState("")
-   
-   
-const fazerLista = async() => {
-    const result = await listarContatos()
-    setLista(result)
-}
+function Listar (){
 
-
+    const [lista, setLista] = useState("")
    
+   
+    const fazerLista = async() => {
+        const result = await listarContatos()
+        setLista(result)
+    
+
+    }
     return (
         <div>
 <table>
@@ -20,37 +20,33 @@ const fazerLista = async() => {
     <th>Nome Completo</th>
     <th>E-mail</th>
     <th>Telefone</th>
+    <th> <button onClick={() => fazerLista()} >Contatos cadastrados</button></th>
   </tr>
  
 
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td><button>Editar</button></td>
-    <td><button>Apagar</button></td>
-  </tr>
  
-</table>
-<button onClick={() => fazerLista()}>Contatos cadastrados</button>
 
-{lista && lista.data?.map(datos => {
-    return (
-        <div  key = {datos.id}>
-            <ul>
+{lista && lista.data?.map(element => {
+    
+        return(
+        <div key = {element.id}>   
                 
-        <li>{datos.nome}</li>
-        <li>{datos.email}</li>
-        <li>{datos.telefone}</li>
-            </ul>
+        <td>{element.name}</td>
+        <td>{element.email}</td>
+        <td><button>Editar</button></td>
+    <td><button>Apagar</button></td> 
         </div>
-    )
-})}
-
-
-               
+    
+    
+)})}
+     
+  </tr> 
+</table>
+         
         </div>
     )
 }
+
 
 export default Listar

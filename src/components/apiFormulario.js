@@ -15,3 +15,9 @@ export const listarContatos = async () => {
    
 
 }
+export const deletarContato = async (id) => {
+    const url = `${urlBase}/contacts/${id}`
+    console.log('deletado :(')
+    return await axios.delete(url)
+}
+
