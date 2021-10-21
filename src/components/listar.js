@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react'
 import { listarContatos } from "./apiFormulario"
+import "../App.css"
 
 function Listar (){
 
@@ -14,7 +15,7 @@ function Listar (){
 
     }
     return (
-        <div>
+        <div class="container">
 <table>
   <tr>
     <th>Nome Completo</th>

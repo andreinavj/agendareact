@@ -5,9 +5,14 @@
 }
 .label {
   font-size: 20px;
+  padding: 1%;
 }
 .titulo {
   background: rebeccapurple;
   color: white;
 }
-
+.container{
+box-sizing: border-box;
+border-style: solid ;
+margin: 5%;
+}
