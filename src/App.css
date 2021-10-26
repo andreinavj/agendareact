@@ -1,7 +1,21 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  background: pink;
+  background:orange
+}
+.Formulario{
+  display:flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 30rem;
+  height: auto;
+  margin: 2rem auto;
+  margin-right: 30rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-image:url(https://images.pexels.com/photos/5477594/pexels-photo-5477594.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
 }
 .label {
   font-size: 20px;
@@ -15,4 +29,11 @@
 box-sizing: border-box;
 border-style: solid ;
 margin: 5%;
+}
+button { 
+color:black;
+background:orange ;
+border: 50px;
+width: fit-content;
+
 }

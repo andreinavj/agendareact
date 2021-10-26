@@ -22,7 +22,7 @@ function Form() {
  
   return (
     <div>
-      <form onSubmit={Criar}>
+      <form  className="Formulario"onSubmit={Criar}>
         <label className="label">Nome</label>
         <input
           type="text"
